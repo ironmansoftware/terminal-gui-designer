@@ -28,9 +28,7 @@ jobs:
       run: dotnet build
 
     - name: Release
-      run: 
-        Rename-Item .\bin\Release\netstandard2.0 TerminalGuiDesigner
-        Publish-Module -Path .\bin\Release\TerminalGuiDesigner -NuGetApiKey $Env:APIKEY
+      run: .\publish.ps1
       env:
         APIKEY: ${{ secrets.APIKEY }}
       shell: pwsh
