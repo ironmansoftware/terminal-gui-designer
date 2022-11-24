@@ -25,10 +25,10 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Build
-      run: dotnet build
+      run: dotnet build -o TerminalGuiDesigner
 
     - name: Release
-      run: .\publish.ps1
+      run: Publish-Module -Path .\TerminalGuiDesigner -NuGetApiKey $Env:APIKEY
       env:
         APIKEY: ${{ secrets.APIKEY }}
       shell: pwsh
