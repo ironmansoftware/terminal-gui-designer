@@ -29,8 +29,8 @@ jobs:
 
     - name: Release
       run: 
-        Rename-Item bin\Release\netstdard2.0 bin\Release\TerminalGuiDesigner
-        Publish-Module -Path bin\Release\TerminalGuiDesigner -NuGetApiKey $Env:APIKEY
+        Rename-Item .\bin\Release\netstandard2.0 TerminalGuiDesigner
+        Publish-Module -Path .\bin\Release\TerminalGuiDesigner -NuGetApiKey $Env:APIKEY
       env:
         APIKEY: ${{ secrets.APIKEY }}
       shell: pwsh
