@@ -1,4 +1,4 @@
-name: Build
+name: CI
 
 on:
   push:
@@ -30,8 +30,10 @@ jobs:
     - name: Build
       run: dotnet build
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: PowerShell Module
-        path: bin\Release\netstandard2.0
+    - name: Release
+      run: 
+        Rename-Item bin\Release\netstdard2.0 bin\Release\TerminalGuiDesigner
+        Publish-Module -Path bin\Release\TerminalGuiDesigner -NuGetApiKey $Env:APIKEY
+      env:
+        APIKEY: ${{ secrets.APIKEY }}
+      shell: pwsh
