@@ -1,4 +1,4 @@
-The Terminal User Interface (TUI) designer is used for designing UIs that run within standard terminals. They output script that works with Terminal.Gui. This project allows for the creation of UIs that run on Windows, Linux and Mac. You can even run terminals in shells like Azure Cloud Shell. 
+The Terminal User Interface (TUI) designer is used for designing UIs that run within standard terminals. They output script that works with [Terminal.Gui](https://github.com/gui-cs/Terminal.Gui). This project allows for the creation of UIs that run on Windows, Linux and Mac. You can even run terminals in shells like Azure Cloud Shell. 
 
 ## Overview
 
