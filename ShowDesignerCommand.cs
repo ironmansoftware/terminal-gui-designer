@@ -91,19 +91,11 @@ namespace Terminal.Gui.Designer
                         })
                     }),
                     new MenuBarItem("_Help", new [] {
-                        new MenuItem("_About", "", () => MessageBox.Query("About", $"PowerShell Pro Tools TUI Designer\nVersion: {base.MyInvocation.MyCommand.Module.Version.ToString()}\n", "Ok")),
+                        new MenuItem("_About", "", () => MessageBox.Query("About", $"PowerShell Terminal GUI Designer\nVersion: {base.MyInvocation.MyCommand.Module.Version.ToString()}\n", "Ok")),
                         new MenuItem("_Docs", "", () => {
                             var psi = new ProcessStartInfo
                             {
-                                FileName = "https://docs.poshtools.com/powershell-pro-tools-documentation/tui-designer",
-                                UseShellExecute = true
-                            };
-                            Process.Start (psi);
-                        }),
-                        new MenuItem("_Support", "", () => {
-                            var psi = new ProcessStartInfo
-                            {
-                                FileName = "mailto:support@ironmansoftware.com",
+                                FileName = "https://www.github.com/ironmansoftware/terminal-gui-designer",
                                 UseShellExecute = true
                             };
                             Process.Start (psi);
